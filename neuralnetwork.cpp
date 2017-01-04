@@ -70,7 +70,6 @@ void NeuralNetwork::Back(float lambda) {
 		theta_grad = 1.0 / (float)n_samples * Deltas[i] + reg_item;
 		theta_grads.push_back(theta_grad);
 	}
-	cout << "Backpropagation costs " << (float)(clock() - t) / CLOCKS_PER_SEC << " s" << endl;   //test
 }
 // create a smaller NeuralNetwork and check if the backpropagation works well
 void NeuralNetwork::CheckGradient(float lambda, float epsilon) {
